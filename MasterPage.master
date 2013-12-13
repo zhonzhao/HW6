@@ -1,0 +1,38 @@
+﻿<%@ Master Language="VB" CodeFile="MasterPage.master.vb" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Record's Store</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+            <img class="rg_i" data-src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgyq68LbWno56rUG0aXxIH-3gPxoMVp52hH0sNKcZHMwhIGvQ2_Q" data-sz="f" name="c5vULW2al41coM:" onload="google.stb.csi.onTbn(1, this)" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgyq68LbWno56rUG0aXxIH-3gPxoMVp52hH0sNKcZHMwhIGvQ2_Q" style="width: 394px; height: 133px; margin-left: 0px; margin-right: 0px; margin-top: 0px" /><asp:Menu ID="Menu1" runat="server" StaticMenuItemStyle-CssClass="nav" Orientation="Horizontal" DataSourceID="SiteMapDataSource1" StaticMenuStyle-CssClass="nav navbar-nav" CssClass="collapse navbar-collapse navbar-ex1-collapse"></asp:Menu>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server"  ShowStartingNode="false"/>
+            <p class="navbar-text pull-right">
+                <asp:Label ID="lblLogin" runat="server" Text=""></asp:Label> <asp:LoginName ID="lgnName" runat="server" />
+                <asp:LoginStatus ID="LoginStatus1" runat="server" />
+            </p>
+        </nav>
+
+        <div>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="footer-wrapper"><center><asp:Label ID="lblToday" runat="server" Text="Label"></asp:Label> &nbsp;Zhongli Zhao</center></div>
+    </div>
+        <script src="//code.jquery.com/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </form>
+</body>
+</html>
+
